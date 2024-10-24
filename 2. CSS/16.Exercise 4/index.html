@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <style>
+        :root{
+            --color1: rgb(1, 199, 244);
+            --color2: lightblue;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: var(--color2);
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+        }
+
+        div{
+            padding: 25px;
+            background-color: var(--color1);
+        }
+        li{
+            padding: 0px 15px;
+        }
+
+        li:hover{
+            color: var(--color2);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>Contacts</li>
+            <li>About</li>
+            <li>Profile</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Querry</title>
+    <style>
+        body{
+            background-color: cyan;
+        }
+        /*Syntax for media querry
+         @media not/only mediatype and (expression){
+            CSS Codes
+        } 
+        These css codes will execute if the above expression holds true*/
+        @media only screen and (min-width:455px){
+            body{
+                background-color: greenyellow;
+            }
+        }
+        @media not screen and (orientation:landscape){
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        
+        .boxes{
+            display:flex;
+        }
+        .box{
+            width: 233px;
+            height: 233px;
+            background-color:indigo;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        im the body
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

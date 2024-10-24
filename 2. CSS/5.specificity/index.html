@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        .h1{
+            color: orange;
+            text-transform: uppercase;
+        }
+        .h1{
+            color: teal !important;
+        }
+        .h1{
+            color: purple;
+        }
+        [data-x=a]{
+            color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="h1" style="color: maroon;" data-x="a">
+        Cascade Algorithm
+    </h1>
+    <pre><p>
+    priority ranges from:
+    inline > id > class/attribute > element > universal
+        highest priority is of important keyword which can overwrite inline style
+        if the priority is same then order comes to play
+        the one at the end will be applied
+    </p></pre>
+    <a href="https://www.codewithharry.com/tutorial/css-specificity/">For reference check this link</a>
+</body>
+</html>

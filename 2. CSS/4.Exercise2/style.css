@@ -1,0 +1,17 @@
+p:first-child{
+    color: red;
+    background-color: yellow;
+}
+
+p{
+    background-color: blue;
+    color: white;
+}
+
+/* 
+can also be done using a general case of nth child pseudo selector
+p:nthchild(1){
+    color: red;
+    background-color: yellow;
+}
+*/

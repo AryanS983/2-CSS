@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit and object Cover</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 500px;
+            border: 10px dashed red;
+            padding: 10px;
+            background-image: url(https://www.centurypublishing.com/wp-content/uploads/2013/02/Good-Resolution-Image.jpg);
+
+            background-position: center center;
+            /* changes the position of the image in the background */
+
+            background-repeat: no-repeat;
+            /* we can set whether the background image will repeat or not  */
+
+            /* background-clip: border-box; */
+            /* background-clip: content-box; */
+            /* uncomment to see the differnce (not commonly used) */
+
+
+        }
+        img{
+            height: 400px;
+            width: 500px;
+            object-fit: contain;
+            /* Adjusted in the container so that the aspect  ratio is not disturbed and the complete image is visible */
+
+            object-fit: cover;
+            /* Again without disturbing the aspect ratio the image is fitted inside the container but this time some of its portions may get cut off in order to accomodate in the given height- width */
+
+            /* object-position: top right; */
+            /* we can position the image inside the container by using left right top bottom or simply x values and y values */
+            
+            /* object-fit: fill; */
+            /* basically accomodating the complete image inside the container by disturbing its aspect ratio  */
+
+            /* object-fit: none; */
+            /* keeps the original aspect ratio and scale but image may over flow  */
+            
+            
+            /* object ka centre is basically 
+            object-fit: 50% 50%;  */
+            
+
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://iso.500px.com/wp-content/uploads/2016/03/pedroquintela-1500x844.jpg" alt="">
+        
+    </div>
+</body>
+</html>

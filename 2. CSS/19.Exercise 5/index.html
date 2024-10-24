@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            padding: 0px 20px;
+        }
+
+        nav {
+            background-color: pink;
+            padding: 25px;
+        }
+
+        header{
+            position: sticky;
+            top: 0px;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .rect {
+            background-color: green;
+            height: 80vh;
+            margin: 20px;
+            display: flex;
+            /* justify-content: space-evenly; */
+        }
+
+        .sq1 {
+            background-color: rgb(219, 62, 88);
+            width: 40vw;
+            height: 50vh;
+            margin: auto;
+        }
+
+        .sq2 {
+            background-color: rgb(62, 201, 219);
+            width: 40vw;
+            height: 50vh;
+            margin: auto;
+        }
+
+        .welcome {
+            width: 65vw;
+            /* height: 100px; */
+            margin: 10px auto;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            font-size: xx-large;
+            padding: 20px;
+            border-radius: 30px;
+        }
+        img{
+            border: none;
+            border-radius: 50%;
+        }
+        .icon{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        .foot{
+            height: 40px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="rect">
+            <div class="sq1"></div>
+            <div class="sq2"></div>
+        </div>
+        <div class="welcome">Welcome to this Sigma Web Development Express</div>
+        <div class="icon">
+            <img src="https://png.pngtree.com/png-vector/20190815/ourmid/pngtree-light-bulb-icon-vector--light-bulb-ideas-symbol-illustration-png-image_1692654.jpg"
+                width="45" alt="">
+        </div>
+    </main>
+    <footer>
+        <div class="foot"></div>
+    </footer>
+
+</body>
+
+</html>

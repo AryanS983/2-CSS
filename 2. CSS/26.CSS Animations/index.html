@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            height: 50vh;
+            width: 40vw;
+            background-color: hwb(128 0% 0%);
+        }
+
+        .box{
+            height: 10vh;
+            width: 10vw;
+            background-color: rgb(244, 244, 5);
+        }
+
+        .box:hover{
+            animation-name: AryanKaAnimation;
+            animation-duration: 3s;
+            animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1) ;
+            animation-iteration-count: 3;
+            /* we can aslo say infinite instead of 5 to make an infintely looping animation */
+            animation-delay: 1ms;
+            animation-direction: alternate;
+            /* animation-play-state: paused; */
+            /* used to play or pause the animation at any frame. valid values are paused and running */
+            animation-fill-mode: forwards;
+            /* when fill-mode is forward it retins its final state */
+
+            /* All this can condense into this particular funtion */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+            /* We can add to animations on a single element by using comma separated values. Example:- */
+            animation: AryanKaAnimation 10s ease-in-out 0s 3 alternate-reverse,    Aryan2 2s ease-in-out 3 alternate-reverse;
+        }
+
+        @keyframes AryanKaAnimation{
+            from{
+                /* background-color: red; */
+            }
+            to{
+                /* background-color: blueviolet; */
+                /* transform: translate(200px); */
+                transform: rotate(360deg);
+
+            }
+        }
+
+        @keyframes Aryan2{
+            20%{
+                background-color: rgb(249, 69, 69);
+            }
+            40%{
+                background-color: darkgreen;
+            }
+            60%{
+                background-color: fuchsia;
+            }
+            80%{
+                background-color: sienna;
+            }
+            100%{
+                background-color: turquoise;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

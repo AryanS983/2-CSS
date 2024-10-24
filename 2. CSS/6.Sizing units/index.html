@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing units</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        html{
+            font-size: 14px;
+        }
+        .box{
+            border: 2px solid blueviolet;
+            background-color: orange;
+            /* width: 1920px; */
+            width: 80vw;
+            /* vw bole to viewport width */
+            height: 10vh;
+            /* height ka ratio constant rakhne k lia vh use hho raha hai viewport height */
+            margin: auto;
+            /* margin auto basically mere left aur right margin ko equal kar deta hai */
+            box-sizing: border-box;
+        }
+
+        .box2{
+            border: 2px solid blueviolet;
+            background-color: orange;
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            /* min height is given hence it will have 80vh height irrespective of its content. when the content is increased the height of the container adjusts itself accordingly */
+            margin: 20px auto;
+            font-size: 18px ;
+            /* box-sizing: border-box; */
+        }
+        .box2 >div{
+            /* font-size: 2em; */
+            /* 2em ka matlab basically jo bhi font size  hone wla tha uska 2 times hoga
+            mtlb ye ki box2 ka 18 px font size tha but <div> ka font size hua 18x2=36px
+            agar  box2 ka fontsize already nhi hota to default 16 px ho jayga and 2em = 16x2=32  */
+            font-size: 2rem;
+            /* 2rem means basiclly jo root element ka size hai uska 2 times. yaha root element hai html */
+            width: 50%;
+            /* 50% means 50%width of its parent i.e box2 in this case */
+            border: solid 2px;
+            margin: 10px auto;
+            /* using margin auto we have allighned it to the center */
+        }
+        .box2 > div> p{
+            width: 50%;
+            border: solid green;
+        }
+
+        .cont{
+            background-color: lightgreen;
+            color: blue;
+            width: 80vmax;
+            /* in laptop vmin is vh and in mobile phone vmin is vw */
+            font-size: 1.5rem;
+            margin: auto;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="box2">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptate excepturi eaque quam praesentium aliquam fuga inventore labore perferendis doloremque?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A excepturi natus quia qui nulla numquam veniam corporis aspernatur. Adipisci eaque neque dolorem autem. Error et ipsam, nulla ullam voluptates veniam delectus animi placeat deserunt nam nemo dolores, aperiam consequuntur magnam alias autem sed quasi doloribus tempore fugiat! Asperiores error accusamus neque quae dignissimos? Numquam eius eveniet sequi ad harum dicta magnam modi ducimus accusamus eligendi reprehenderit maxime sunt 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quos quas voluptatum totam iure cumque fuga odit doloremque non ad!</p>
+        </div>
+    </div>
+    
+    <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi non nobis eveniet, aspernatur soluta, obcaecati eos pariatur blanditiis dolorum delectus animi magni ratione dolor provident fugit impedit eaque vero.</div>
+    <a href="https://www.codewithharry.com/tutorial/css-size/" target="_blank">Reference Link</a>
+
+</body>
+</html>

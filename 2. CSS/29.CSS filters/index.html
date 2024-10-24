@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        .container {
+            /* filter: blur(1px); */
+            filter: grayscale(60%);
+            filter: hue-rotate(90deg);
+
+            /* we can also stack filters together */
+            filter: contrast(200%) grayscale(60%) hue-rotate(90deg);
+
+
+            /* try these bad boiz */
+            filter: blur(5px);
+            filter: brightness(0.4);
+            filter: contrast(200%);
+            filter: grayscale(50%);
+            filter: hue-rotate(90deg);
+            filter: invert(75%);
+            filter: opacity(25%);
+            filter: saturate(30%);
+            filter: sepia(60%);
+            filter: drop-shadow(16px 16px 20px blue);
+            /* filter: drop-shadow(x-shift y-shift blur color) */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk="
+            alt="">
+    </div>
+</body>
+
+</html>

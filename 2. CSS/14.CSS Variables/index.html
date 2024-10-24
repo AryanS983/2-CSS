@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* using :root we can make global variables which are valid throughout the css */
+        :root{
+            --color: rgb(40, 11, 232);
+            --seccolor: lightblue;
+            --border: 2px solid yellow;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list {
+            /* here colour is local variable and is valid within this .list block */
+            --color: rgb(37, 150, 15);
+            list-style: none;
+            background-color: var(--color);
+            padding: 15px;
+            display: flex;
+        }
+
+        li{
+            padding: 10px;
+            border: var(--border);
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, molestias iure. Tenetur itaque nulla voluptate
+        atque accusamus ab fugiat, distinctio odio. Dolorum, quas in qui, sed debitis maiores molestias libero pariatur
+        explicabo dolore voluptas eaque ex! Cupiditate laudantium iusto maiores aperiam beatae expedita minus aliquam.
+    </div>
+</body>
+
+</html>

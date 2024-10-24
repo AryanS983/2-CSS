@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow handling</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            height: 20vh;
+            width: 50vw;
+            
+            /* overflow: scroll; */
+            /* if overflow is set to scroll then the scroll bars will be displayed irrespective of the content overflow */
+            /* overflow: auto; */
+            /* in case of overflow auto, we will get a scrollbar only if its necessary, ie when the content is actually overflowing */
+
+            /* text-wrap: nowrap ; */
+            /* white-space: nowrap; does the same thing as textwrap nowrap */
+            /* text-overflow: ellipsis; */
+            /* displays the extra overflown text as 3dots (ellipsis) ...  */
+
+            /* there is a subtle difference b/w overflow and text overflow
+            text overflow will not work of the overflow is not taken care of */
+            /* overflow: hidden; */
+            /* overflow: clip; */
+            
+            /* overflow-x and overflow-y can be indiividually changed */
+            /* overflow-y: auto; */
+            /* overflow-x: hidden; */
+            overflow: hidden auto;
+
+            /* mainly auto will be used */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Im a box and I love Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque libero earum voluptates maiores perferendis autem officia nemo doloribus nam vitae alias amet minus corporis laborum cumque explicabo consequatur, quisquam fugiat reprehenderit? Ducimus deserunt suscipit ratione officiis reiciendis accusantium qui provident ea, dolor, atque, optio dolorum perferendis aut accusamus quas consequuntur culpa exercitationem sapiente laboriosam aspernatur. Quam.
+    </div>
+</body>
+</html>

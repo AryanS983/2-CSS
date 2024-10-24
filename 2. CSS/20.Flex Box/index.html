@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            padding: 10px;
+            display: flex;
+            height: 80vh;
+
+            justify-content: center;
+            /* JUSTIFY CONTENT CENTRE IS USED TO ALIGN ITEMS TO THE CENTRE OF THE MAIN AXIS */
+            /* we mainly use justify content to center the given boxes
+            Although we can also use other values for justify-content
+            like flex-left, flex-right, space-around, space-between, space-evenly */
+
+            align-items: center;
+            /* mainly used in nowrap i.e single line of boxes */
+            /* Align-item will align them in the cross axis */
+            /* align items can have other values like flex-start, flex-end basline, stretch*/
+
+
+            flex-direction: row ;
+            /* we can have row, row-reverse, column, column-reverse values for flex-direction */
+
+            /* flex-wrap: wrap; */
+            /* wraps the elements to the next line */
+
+            /* align-content: flex-start; */
+            /* It is used to align items when there are multiple lines of boxes
+            It will only occour if we have flex wrap enabled */
+            /* it can have values like flex-start, flex-end, space-around, space-between, space-evenly*/
+
+            /* using flex-flow: <flex-direction> <flex-wrap>;
+            we can directly set the direction and wrap using a single property */
+            
+            
+            /* gap: 10px 30px; */
+            /* used to define  row gap and column gap */
+            
+        }
+            
+            /* We have flex-grow and flex-shrink properties which makes the element grow or shrink based on its grow/shrink value 
+            its only applicable if flex-wrap is nowrap*/
+
+        .box{
+            height: 80px;
+            width: 80px;
+            background-color: blueviolet;
+            margin: 5px;
+            flex-grow: 1;
+            /* flex grow is an item property */
+            /* it makes the boxes cover the entire main axis by distributing the elements equally  */
+            /* default value of flex-grow/shrink is 0 */
+        }
+
+        /* order is an item property */
+        .order1{
+            order: 1;
+            flex-grow: 2;
+            /* flex-grow:2 means it will grow 2 times faster */
+        }
+        .order2{
+            order: 2;
+            flex-shrink: 2;
+            /* ability of an item to shrink if necessary */
+            
+
+            align-self: flex-end;
+            /* item property which is used to align the box itself irrespective if the alignment of the container */
+        }
+        /* basically order property arranges the elements according to the order value
+        default order is 0 */
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box order1">5</div>
+        <div class="box order2">6</div>
+        <div class="box">1</div>
+        <!-- <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div> -->
+    </div>
+    <img src="./Screenshot (546).png" width="100%" alt="">
+    <img src="./Screenshot (547).png" width="100%" alt="">
+</body>
+</html>

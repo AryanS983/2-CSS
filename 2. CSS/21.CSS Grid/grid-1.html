@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            border: 2px  solid black;
+            display: grid;
+            grid-template-columns:  [pehla] 130px [doosra] 100px [third];
+            /* we can either define only columns or only rows or both
+            If one of the two is defined, lets say column is defined, then the browser automatically makes the other (i.e rows) accordingly */
+            grid-template-rows: 100px 100px 100px;
+            /* defines the length of grid rows and columns */
+            /* we are dividing the container into rows and columns instead of a big div */
+            /* we can name the respective grid lines by simply using square brackets */
+            
+        }
+
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            /* width: 55px; */
+        }
+        
+        .item1{
+            grid-row: 1/2;
+            /* we can use the user defined names for the grid lines */
+            grid-column: pehla/third;
+            /* defines the area consumed by that particular item */
+            /* <start>/<end> */
+            /* we can also use grid-row-start/end to do the same thing */
+            /* we can also overlap items if they have same grid row/column values */
+        }
+
+        .item4{
+            grid-row: 1/2;
+            grid-column: 1/2;
+
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <!-- <img src="./Screenshot (550).png" width="100%" alt=""> -->
+</body>
+</html>

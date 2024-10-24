@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        .box:nth-child(2) {
+            background-color: pink;
+        }
+
+        .box:first-child:first-line {
+            background-color: yellow;
+        }
+
+        /* we can use .box::first-line or .box::first-letter to select the respective 
+        elements */
+
+        .boxes * {
+            border: 2px solid purple;
+        }
+
+        /* selects every element in .boxes  */
+
+        .box:first-child[data-color="primary"] {
+            padding: 10px 0px;
+        }
+        /* we can be more specific */
+
+        p, div, [data-color="primary"]{
+            margin-top: 20px;
+        }
+        /* we can group multiple selectors together */
+
+    .box:nth-child(odd){
+        background-color: aqua;
+    }
+
+    .box:nth-last-child(1){
+        background-color: chartreuse;
+    }
+
+    .boxes::before{
+        content: "Aryan is a good boy";
+        color: blue;
+    }
+
+    .boxes::after{
+        content: "Aryan likes to play games";
+        color: green;
+    }
+    
+    /* before and after is use to dynamically insert elements inside html usng css */
+    /* Hence they are called pseudo elements */
+
+    ::selection{
+        color: aqua;
+        background-color: black;
+    }
+    /* the above css will only be applied to the selected text */
+    /* we can also write is as div::selection or .boxes::selection if we want the selection css to be applied at a specific part of the page */
+
+    .box::first-letter{
+        color: peru;
+        font-size: 40px;
+    }
+
+    input::placeholder{
+         color: red;
+    }
+    /* targets the placeholder of the input tag */
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur,
+            dolorem obcaecati earum alias consectetur, ducimus laudantium ut fugit asperiores veniam, unde esse!
+            Voluptate vitae accusantium sint cum saepe laudantium cupiditate fuga exercitationem debitis veniam?</div>
+        <div class="box">Im a box</div>
+        <div class="box">Im another box</div>
+        <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quia officiis voluptatibus?</p>
+        <input type="text" placeholder="Enter your text here">
+    </div>
+</body>
+
+</html>

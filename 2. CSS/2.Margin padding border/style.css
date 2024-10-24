@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box1{
+    color: fuchsia;
+    background-color: yellow;
+    padding: 10px;
+    margin: 35px;
+    border: 2px dashed blue;
+    height: 200px;
+    box-sizing: border-box;
+    /* using boxsizing bordrbox we are trying to say that the height 200px is content height + padding + border */
+    /* margin is excluded */
+
+}
+
+.box2{
+    color: orange;
+    background-color: skyblue;
+    padding: 10px;
+    margin: 25px;
+    border: 2px dashed blue;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+figure{
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black ;
+}

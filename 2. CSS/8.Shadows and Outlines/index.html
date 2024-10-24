@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outlines</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            display: inline-block;
+            padding: 45px;
+            /* Shadows an be implemented using box-shadow property
+            syntax: box-shadow: h-offset v-offset blur spread color inset;  */
+            box-shadow: 5px 5px 15px 5px #888888;
+            /* inset attribute is used to make the shadow inwards */
+        }
+        .text{
+            text-shadow: 2px 2px 3px red;
+            border: 2px solid black;
+            border-radius: 10px;
+            outline: 2px solid green;
+            outline-offset: 30px;
+            /* Basic difference b/w border and outline is that outline can be altered without disturbing the box model of the element. */
+        }
+        .reference{
+            margin: 50px auto;
+        }
+        iframe{
+            width: 60vw;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Im a box
+    </div>
+    <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem et dolor repellat excepturi explicabo reprehenderit fuga tempora voluptates iure magni ullam beatae fugit, voluptas aperiam accusantium quasi perspiciatis ex ratione corporis nesciunt esse, dolores harum ipsum! Expedita quia neque atque! Possimus dignissimos fuga voluptate sed.
+    </p>
+    <div class="reference">
+        <p>References:-</p>
+        <iframe src="https://www.codewithharry.com/tutorial/css-shadows/#google_vignette" frameborder="0" height="500px"></iframe>
+    </div>
+</body>
+</html>

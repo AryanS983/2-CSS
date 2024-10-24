@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            border: solid 2px blue;
+            display: inline-block;
+            padding: 45px;
+            margin: 20px;
+            width: 200px;
+            /* when display property is inline we cannot apply borders or margins at the top to solve this issue we use diplay:inline-block 
+            dispplay:none; causes it to disapear */
+        }
+        .box1{
+            display: none;
+            /* basically display: none; causes the element vanish and space to be removed from the  website */
+            /* visibility: hidden; */
+            /* whereas visibility hidden causes the element to vanish but the space is preserved */
+            display: inline-flex;
+            justify-content: center;
+            /* above two features are mostly used to align the contents in a box */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Im a box</div>
+    <div class="box ">also a good box</div>
+    <span>Im a span</span>
+    <span>im good</span>
+</body>
+</html>

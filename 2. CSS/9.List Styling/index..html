@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Styling and nav bar</title>
+    <style>
+        .nav1>li{
+            /* a list consist if two elements a marker and the content */
+            /* list-style-type: "😁" ; */
+            /* used to change the type of marker */
+            /* list-style-position: inside; */
+            /* used to include the marker in the box model of the list item */
+            /* list-style-type: none; */
+            /* Using list style none we can remove the marker and the space taken by it */
+            /* list-style-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Map_marker.svg/512px-Map_marker.svg.png); */
+            /* we can add all these effects in a singe property */
+            list-style: none inside "😁";
+            background-color: pink;
+            border: 2px solid blue;
+        }
+
+        /* what we usually do for making navbar */
+
+        .nav2{
+            list-style: none;
+            display: flex;
+        }
+        .nav2 li{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav1">
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <nav>
+        <ul class="nav2">
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </nav>
+</body>
+</html>

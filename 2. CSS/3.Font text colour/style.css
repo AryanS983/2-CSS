@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:ital@1&display=swap');
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size:x-large;
+    font-style: italic;
+    text-decoration: dotted underline;
+    text-align: center;
+}
+
+.lorem2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: dotted underline pink;
+    /* text-decoration-color: #da70d6 ; */
+    text-decoration-thickness: 5px;
+}
+
+article{
+    font-family: 'Baloo Bhai 2', sans-serif;
+    line-height: 3;
+    /* gap b/b two lines */
+    letter-spacing: 5px;
+    /* space b/w two letters */
+    text-transform: capitalize;
+    text-indent: 30px;
+    /* adds white spaces in the begining of a para */
+}
+
+.lorem{
+    border: 2px solid red;
+    padding: 5px;
+    width: 200px;
+    word-break: break-all;
+    /* breaks the word at the end of a line instead of transfering it to the next line */
+    /* text-overflow:ellipsis; */
+    /* displays the extra overflown text as 3dots (ellipsis) ... */
+    /* overflow: hidden; */
+    /* hides the overflown text */
+}

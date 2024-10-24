@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            /* display: flow-root; */
+            /* display flowroot is applied if the given img does not accomodate within the parent box */
+        }
+        .card{
+            border: 2px solid red;
+            clear: left;
+            /* this property is used to say "ki mere left me mat dikh jaiyo"  
+            we can also use clear: both to say "mere left ya right me mat dikh jaiyo"
+            basically it does not allow any thing to float in its left/right side*/
+        }
+        .card:nth-child(3){
+            clear: both;
+        }
+        img{
+            /* float:left; */
+            /* this means img is floating towards the left and allows text to be written in its right side */
+            float: right;
+            /* as the img cannot float towards the left of the card due to clear propeerty we'll make it float towards the right */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://e0.pxfuel.com/wallpapers/248/495/desktop-wallpaper-nature-high-quality-high-resolution.jpg" alt="" width="255">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, totam. Itaque inventore provident sunt, optio dolorem eveniet delectus repellat deserunt animi nihil illum.</div>
+        <div class="card">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti aspernatur aut distinctio quaerat impedit iusto et adipisci optio dolorem rem, voluptatibus quisquam est, dicta minima consequatur voluptas repudiandae officiis. Corporis natus nulla, accusamus tempora, ratione nihil in sequi, autem numquam a adipisci voluptates?</div>
+        <div class="card">Should not use Flost or clear in modern layouts</div>
+    </div>
+</body>
+</html>
